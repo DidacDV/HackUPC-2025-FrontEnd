@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       child: GradientBackground(child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const SizedBox(height: 80),
+          const SizedBox(height: 40),
           CupertinoCard(
             onTap: () {
               print("Card tapped!");
@@ -42,11 +42,10 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            child:Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const SizedBox(height: 350),
                 FloatingActionMenu(
                 items: [
                   FloatingActionItem(icon: CupertinoIcons.graph_circle, onPressed: () {
@@ -60,7 +59,7 @@ class HomeScreen extends StatelessWidget {
               ]
               ,)
 
-          )
+
 
         ],
       ))
