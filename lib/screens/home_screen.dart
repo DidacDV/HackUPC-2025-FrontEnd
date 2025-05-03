@@ -53,7 +53,9 @@ class HomeScreen extends StatelessWidget {
                   }, label: "Predict"),
                   FloatingActionItem(icon: CupertinoIcons.gauge, onPressed: () {}, label: "Improve"),
                   FloatingActionItem(icon: CupertinoIcons.calendar_today, onPressed: () {}, label: "AI Calendar"),
-                  FloatingActionItem(icon: CupertinoIcons.circle_grid_3x3, onPressed: () {}, label: "NFC Bizum"),
+                  FloatingActionItem(icon: CupertinoIcons.circle_grid_3x3, onPressed: () {
+                    Navigator.of(context, rootNavigator: true).pushNamed("/nfcbizum");
+                  }, label: "NFC Bizum"),
                 ],
               )
               ]
