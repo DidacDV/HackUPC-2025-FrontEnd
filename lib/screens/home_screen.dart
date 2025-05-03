@@ -51,7 +51,9 @@ class HomeScreen extends StatelessWidget {
                   FloatingActionItem(icon: CupertinoIcons.graph_circle, onPressed: () {
                     Navigator.of(context, rootNavigator: true).pushNamed("/predict");
                   }, label: "Predict"),
-                  FloatingActionItem(icon: CupertinoIcons.gauge, onPressed: () {}, label: "Improve"),
+                  FloatingActionItem(icon: CupertinoIcons.gauge, onPressed: () {
+                    Navigator.of(context, rootNavigator: true).pushNamed("/improve");
+                  }, label: "Improve"),
                   FloatingActionItem(icon: CupertinoIcons.calendar_today, onPressed: () {}, label: "AI Calendar"),
                   FloatingActionItem(icon: CupertinoIcons.circle_grid_3x3, onPressed: () {}, label: "NFC Bizum"),
                 ],
