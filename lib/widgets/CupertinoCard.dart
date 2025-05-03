@@ -21,12 +21,12 @@ class CupertinoCard extends StatelessWidget {
       onTap: onTap,
       child: Container(
         margin: margin,
-        padding: padding,
+        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: CupertinoColors.black,
+              color: Color(0x3A000000),
               blurRadius: 6,
               offset: Offset(0, 3),
             ),

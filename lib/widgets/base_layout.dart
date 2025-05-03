@@ -13,9 +13,7 @@ class BaseLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text(title),
-      ),
+      backgroundColor: Color(0xFF1900FC),
       child: SafeArea(
         child: Column(
           children: [
@@ -26,13 +24,33 @@ class BaseLayout extends StatelessWidget {
                 children: [
                   CupertinoButton(
                     padding: const EdgeInsets.all(10.0),
-                    child: const Icon(CupertinoIcons.profile_circled),
                     onPressed: () {
                     },
+                    child: Container(
+                      padding: const EdgeInsets.all(10.0),
+                      decoration: BoxDecoration(
+                        color: Color(0x42555151), // Background color
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        CupertinoIcons.profile_circled,
+                        color: CupertinoColors.white,
+                        weight: 700,
+                      ),
+                    ),
                   ),
                   Expanded(
                     child: CupertinoSearchTextField(
+                      decoration: BoxDecoration(
+                        color: Color(0x71CACACA),
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
                       placeholder: 'Search...',
+                      itemColor: CupertinoColors.white,
+                      placeholderStyle: TextStyle(
+                        color: CupertinoColors.white,
+                        fontWeight: FontWeight.w500,
+                      ),
                       onChanged: (value) {
                       },
                     ),
@@ -40,25 +58,37 @@ class BaseLayout extends StatelessWidget {
                   Row(
                     children: [
                       CupertinoButton(
-                        padding: EdgeInsets.zero,
+                        padding: const EdgeInsets.all(10.0),
                         onPressed: () {},
                         child: Container(
                           padding: const EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                            color: CupertinoColors.white, // Background color
+                            color: Color(0x42555151), // Background color
                             shape: BoxShape.circle,
                           ),
                           child: const Icon(
-                            CupertinoIcons.chart_bar,
-                            color: CupertinoColors.destructiveRed,
+                            CupertinoIcons.chart_bar_alt_fill,
+                            color: CupertinoColors.white,
+                            weight: 700,
                           ),
                         ),
                       ),
                       CupertinoButton(
                         padding: const EdgeInsets.all(10.0),
-                        child: const Icon(CupertinoIcons.money_dollar),
                         onPressed: () {
                         },
+                        child: Container(
+                          padding: const EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                            color: Color(0x42555151), // Background color
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(
+                            CupertinoIcons.money_dollar,
+                            color: CupertinoColors.white,
+                            weight: 700,
+                          ),
+                        ),
                       ),
                     ],
                   )
